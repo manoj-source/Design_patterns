@@ -1,0 +1,158 @@
+1) what is OOPs?
+A)  a) OOPs (Object Oriented Programming) is a programming model that organizes software design around objects, rather than logic and functions.
+    b) OOPs enable developers to create modular, organized, maintainable, reusable and extensible software systems.
+
+2) what is the class ?
+A) class is a blue print for creating objects. They define structure and behaviour of objects by specifying attributes (data) and mthods (functions) that instance of class will possess. 
+
+3) what is object ?
+A) object are instances of a class. They represent real world entities and contains data (attributes) and functionality (methods) that operate on that data. Objects are similar to real-world entities, 
+   such as a pencil, chair, or eraser.
+
+4) What are the principals of OOPs?
+A) Abstraction, encapsulation, polymorphism, and inheritance are the four main theoretical principles of object-oriented programming.
+
+5) What is inheritance?
+A) Inheritance allow a new class (subclass or derived class or child class) to inherit attributes and methods from an existing class (superclass or base class or parent class).It promote code reuse and
+   establishes a hierarchical relationship between class.
+   Example if class B is inherit from class A then this can be represnt as :
+                        class A
+						   ^
+						   |
+						   |
+						   |
+						class B 
+
+5) What are Composition ?
+A) Composition is a strong relationship where one class (the whole) contain other class (the part), and the part cannot exist without whole. (It is "is a" relationship).
+
+6) What are Aggregations ?
+A) Aggregation is a weaker relationship than composition, where one class is associated with another, but the associated class can exist independetly. (It is "is a" relationship).
+
+7) What are Associations ?
+A)  a) Unidirectional Association : A relation where one class is aware of another class, allowing it to interact, but the reverse is not necessarily true.
+    b) Bidireactional Association : A mutual relationship where both classes aware of each other, enabling interaction in both directions.						
+						
+8) what is encapsulation ?
+A) Encapsulation is process of bundling data(attributes) and methods (function) that operate on that data into a single unit called as class. It restrict the direct access to object's internal state.
+   and enforce the access through define methods, thus hiding implementation details.
+   
+   
+9) what is Abstraction ?
+A) Abstraction is process of simplifying complex reality by modeling a classes based on their essential properties and behaviours while ignoring non-essential details. It allow developers to focus on
+   what an object does rather than how it does it.
+
+10) what is polymorphism ?
+A) a) Polymorphism word is the combination of "poly," which means many + "morphs," which means forms, which together means many forms. Polymorphism in C++ is when the behavior of the same object or   
+      function is different in different contexts. 
+   b) Polymorphism is divided into two types.
+          1) Compile time Ploymorphism.
+		  2) Run time Polymorphism.
+   c) 
+       1) Compile time polymorphism :
+                    This is achieved by method overloading and operator overloading. It is also known as "static" or "early binding".
+             a) Method Overloading :
+                               	       1) When we have two metods with the same name but different parameters, different methods are called depending on the number and data types of parameters.    
+									      This is known as method overloading
+                                       2) method Overloading can be achieved through the following two cases:
+                                               a) The names of the method and return types are the same but differ in the type of arguments.
+											   b) The name of the method and return types are the same, but they differ in the number of arguments.
+									   3) Correct method id determine at compile time.
+									 
+			 b) Operator Overloading :
+			                            C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. For example, we can make use of the addition operator (+) for string class to concatenate two strings. We know that the task of this operator is to add two operands. So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them.
+
+       2) Run time polymorphism :
+	     
+		   a) method overloading :
+                                      1) This type of polymorphism is achieved by Function Overriding. Late binding and dynamic polymorphism are other names for runtime polymorphism. The function call 
+									     is resolved at runtime in runtime polymorphism.
+                                      2) Function Overriding occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be 
+									     overridden.
+
+           b) Virtual Functions :
+                                      1) A virtual function is a member function that is declared in the base class using the keyword virtual and is re-defined (Overridden) in the derived 
+									     class.
+                                      2) Virtual functions are Dynamic in nature. 
+									  3) They are defined by inserting the keyword “virtual” inside a base class and are always declared with a base class and overridden in a child class.
+                                      4) A virtual function is called during Runtime.
+
+11) what is relation between encapsulation and inheritance ?
+A) You can do encapsulation without using abstraction, but if you wanna use some abstraction in your projects, you'll need encapsulation.
+
+
+12) what are interfaces and abstarct classes ?
+A)  1) Abstract Classes :
+                            1) They serve as a blue print or template for other classes, known as its sub class or derived class.
+                            2) They cannot be intantiated directly. They exist solely to be inherited from by other calsses.
+							3) They can include both method declaration(signatures) and method implementation. This flexibility allows you to have some default behaviour.
+							4) Subclasses that inherit from abstract class are require to implement abstract methods declared in base class.
+							
+	2) Interface :
+	                        1)They focus on defining contract specifying set of method signatures that a class must adhere to.
+							2) They do not contain any method implementation.
+							3) the primary purpose of interface is to establish a common set of behaviours that multiple, often unrealted, classes can adhere to.
+							4) This promotes high degree of flexibiulity and polymorphism in codebase, as classes from different hierarchies can implement the same interface.
+
+
+13) What are solid principles ?
+A)  1) All the Design patterns will be adhere to this principles.
+    2) If the code fallow above solid principles then the code will be modular, organized, maintainable, reusable and extensible.
+  	3) Single Responsibiity Principles (SRP) :
+	                a) A class should have one reason to change. Meaning it should have single responsibilty or job.
+					b) Single responsibility is subjective, and dependent on specific context of application.
+					   Example :
+					               Order validation can either be a single class responsibility or there can be multiple classes to validate user inputs, generating error messages and checking permission.
+    4) Open-Closed principle (OCP) :
+	                a) Software entities like classes, functions and modules should open for extension and closed for modification.
+					b) Allowing new functionality to add without changig the existing code.
+					c) Once the code is written and tested, It should not modified when adding the new features.
+                    d) Code should be extensible.
+                    e) Example : Logger modules had info and error Logs then we should add debug Logs seamlessly.
+    
+	5) Liskov substitution principles (LSP):
+                    a) At a high level, the LSP states that in an object-oriented program, if we substitute a superclass object reference with an object of any of its subclasses, the program should not 
+					   break.
+					b) We can think of the methods defined in the superclass as defining a contract. Every subclass is expected to stick to this contract. If a subclass does not adhere to the   
+					   superclass’s contract, it’s violating the LSP.
+					c) Other way of defining LSP is a principle in object-oriented programming that states that objects of a superclass should be able to be replaced with objects of a subclass without  
+					   affecting the correctness of the program. In other words, the behavior of a subclass should be a valid substitution for the behavior of the superclass.
+					d) if Emplyee is Base class and manager, intern are subclasses of Employee then Employee should be replace by manager and intern seamlessly.
+					
+	6) Interface segregation principle (ISP) :
+	                a) Clients should not be forced to depend upon interfaces that they do not use.
+					b) This principle states that we should create multiple interfaces to deal with clients instead of one so that for extended classes which might not need some of the   	    		
+					   functionalities, the user should not have to deal with them at all. Instead, he/she should have the independence to choose from the possible interfaces.
+					c) We should Aim for smaller and more specific interface.
+					d) For example:
+					                Swiggy is interface where it has KYC() method let assume customer user, Delivery partners and restaurent owners is derived from Swiggy interface. Then all the 
+									three classes customer users, Delivery partners and restaurents has to implement KYC() method but KYC() method does not make any sense for customer users. So
+									here we should not force to defined KYC() this method in customer users class. One possibe solution overhere is break the interfaces into smaller interface like below:
+                                                                        
+                                                                        ISwiggy
+                                                                         |   |																		
+	                                                    _________________|   |_________________
+	                                                   |									   |			
+													ISwiggyKYC                            ISwiggywithoutKYC         
+											___________|_________________                       |            
+                                            |         					 |						|		   
+							 Delivery Partner class			   Restaurents Class            Customer user Class
+							
+    7) Dependency Inversion Principle (DIP) :
+	                a) High-level modules should not depend on low-level modules.
+                    b) Both should depend on abstractions.
+                    c) Abstractions should not depends on details and details should depend on abstractions.
+                    d) High Level order processing modules should depend on an abstract "PayementGateway" interface, not an specific payement services Like Paypal or 
+					   creditcardprocessor.					
+                      	
+						
+14) DRY (Don’t Repeat Yourself) ?
+A) The DRY (Don’t Repeat Yourself) principle emphasizes the elimination of unnecessary code duplication in a software development project. According to this principle, each piece of knowledge or logic should have a single canonical representation within the system.
+
+15) KISS (Keep It Simple, Stupid) ?
+A) The KISS (Keep It Simple, Stupid) principle emphasizes simplicity in code design and implementation. According to this principle, it’s better to maintain simple solutions rather than making them 
+   complex. Simplicity promotes understanding, maintenance, and problem-solving.
+   
+16) YAGNI (You Ain’t Gonna Need It) ?
+A) The YAGNI (You Ain’t Gonna Need It) principle emphasizes not implementing features or code that are not immediately necessary. According to this principle, it’s better to focus on essential features 
+   and avoid anticipating hypothetical future needs.
